@@ -1,0 +1,9 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+#result{
+  font-size: 26px;
+  color: red;
+}
