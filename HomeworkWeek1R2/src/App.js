@@ -21,11 +21,9 @@ export default class App extends Component {
                     />
                     <button>Generate</button>
                     <br/>
-                    <p>what about:
                     <span id='result'>
                          {this.state.company}
                     </span>
-                    </p>
                 </form>
             </div>
         );
@@ -36,9 +34,16 @@ export default class App extends Component {
         });
     }
     handleGenerate = (event) => {
+        console.log(this.state.ownName);
         event.preventDefault();
+        if(this.state.ownName!==""){
         this.setState({
-            company :this.state.ownName + `'s company`
-        });
+            company :`what about: ` + this.state.ownName +`'s company`
+            });
+        }else{
+            this.setState({
+            company :''
+            });
+        }
     }
 }
